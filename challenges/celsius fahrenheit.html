@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let getCel = prompt("Podaj temperaturę w stopniach Celsjusza:");
+      let getFar = prompt("Podaj temperaturę w stopniach Fahrenheita:");
+
+      function cToF(getCel) {
+        let resultCel = (getCel * 9) / 5 + 32;
+        return resultCel;
+      }
+
+      let retFar = cToF(getCel);
+      console.log(
+        "Temperatura " +
+          getCel +
+          "\xB0 Celsjusza to " +
+          retFar +
+          "\xB0 Fahrenheita."
+      );
+
+      function fToC(getFar) {
+        let resultFar = ((getFar - 32) * 5) / 9;
+        return resultFar;
+      }
+
+      let retCel = fToC(getFar);
+      console.log(
+        "Temperatura " +
+          getFar +
+          "\xB0 Fahrenheita. to " +
+          retCel +
+          "\xB0 Celsjusza."
+      );
+    </script>
+  </body>
+</html>
