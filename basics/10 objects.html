@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let house = {
+        city: "Tarnów",
+        street: "Rogoyskiego",
+        number: 18,
+        surface: 100,
+      };
+
+      let bankAccount = {
+        name: "Katarzyna",
+        surname: "Atemborska",
+        number: 233657895236578954,
+        balance: 1000,
+      };
+      console.log(bankAccount);
+      console.log(bankAccount.name);
+
+      bankAccount.balance = bankAccount.balance + 69;
+      console.log(bankAccount.balance);
+
+      bankAccount.name = bankAccount.name + 69;
+      console.log(bankAccount.name);
+
+      bankAccount.country = "Polska";
+      console.log(bankAccount);
+    </script>
+  </body>
+</html>
