@@ -10,20 +10,31 @@
     <script>
       let employee = {
         name: "John Doe",
-        email: "doe@meta.ua",
+        email: "john@meta.ua",
         rank: "Programmer",
         salary: 8000,
       };
 
       function promoteToManager(user) {
-        employee.rank = "Manager";
-        employee.salary = employee.salary + employee.salary * 0.5;
-        return rank + newSalary;
+        if (user.rank == "Manager") {
+          console.log(employee.name + " jest już managerem.");
+          return;
+        }
+        user.rank = "Manager";
+        user.salary = user.salary + user.salary * 0.5;
 
-        console.log(employee.name + employee.rank);
+        console.log(
+          user.name +
+            " awansował na stanowisko: " +
+            user.rank +
+            ". Jego pensja wzrosła do wartości: " +
+            user.salary
+        );
       }
 
       promoteToManager(employee);
+
+      console.log(employee);
     </script>
   </body>
 </html>
