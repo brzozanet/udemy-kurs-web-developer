@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createUser(name, contact) {
+        let user = { name: name, email: null, telephone: null };
+        if (typeof contact == "string") {
+          user.email = contact;
+        } else if (typeof contact == "number") {
+          user.telephone = contact;
+        } else console.log("Nierozpoznana wartość");
+        return user;
+      }
+
+      //   let user1 = createUser(
+      //     prompt("Dej pirsze imię:"),
+      //     prompt("Dej pirszy kontakt:") // przesyła string zawsze?
+      //   );
+
+      let user1 = createUser("Ola", 113345);
+      let user2 = createUser("Ola", "mail@serwer.domena");
+
+      console.log(user1);
+      console.log(user2);
+    </script>
+  </body>
+</html>
