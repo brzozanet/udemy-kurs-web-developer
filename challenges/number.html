@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let data = prompt("Podaj liczbę całkowitą:");
+      console.log(typeof data + " " + data);
+
+      data = Number.parseInt(data);
+      console.log(typeof data + " " + data);
+
+      function calculateSquareArea(side) {
+        return side * side;
+        console.log("Powierzchnia " + area);
+      }
+
+      let squareArea = calculateSquareArea(data);
+      console.log(squareArea);
+
+      let decimal = prompt("Podaj liczbę dziesiętną:");
+
+      squareArea = calculateSquareArea(decimal);
+      console.log(squareArea.toFixed(2));
+    </script>
+  </body>
+</html>
