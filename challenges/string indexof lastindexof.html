@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function validateEmail(email) {
+        let monkeyIndex = email.indexOf("@");
+        let dotIndex = email.indexOf(".");
+
+        if (monkeyIndex >= 0) {
+          if (dotIndex > monkeyIndex) {
+            console.log(email + " to prawidłowy adres email");
+          } else console.log("Nieprawidłowy adres email, brak kropki po @");
+        } else console.log("Nieprawidłowy adres email, brak @");
+
+        // console.log("Małpa index: " + monkeyIndex);
+        // console.log("Kropka index: " + dotIndex);
+      }
+
+      let userEmail = validateEmail(prompt("Podaj adres mail"));
+    </script>
+  </body>
+</html>
