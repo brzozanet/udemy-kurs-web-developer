@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getUserInformation(name, surname, job) {
+        name = name.toUpperCase().trim();
+        surname = surname.toUpperCase().trim();
+        job = job.toLowerCase().trim();
+
+        let user = `imię: ${name}, nazwisko: ${surname}`;
+        let employee = user.concat(`, zawód: ${job}`);
+
+        console.log(employee);
+      }
+
+      getUserInformation(
+        prompt("Podaj imię:"),
+        prompt("Podaj nazwisko:"),
+        prompt("Podaj stanowisko:")
+      );
+    </script>
+  </body>
+</html>

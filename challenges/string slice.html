@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getEmailParts(email) {
+        if (email.indexOf("@") == -1) {
+          console.log("Nieprawidłowy adres mail, brak @");
+          return false;
+        }
+
+        if (email.indexOf(".") == -1) {
+          console.log("Nieprawidłowy adres mail, brak kropki");
+          return false;
+        }
+
+        const user = email.slice(0, email.indexOf("@"));
+        const server = email.slice(
+          email.indexOf("@") + 1,
+          email.lastIndexOf(".")
+        );
+        const domain = email.slice(email.lastIndexOf(".") + 1);
+
+        console.log(user);
+        console.log(server);
+        console.log(domain);
+      }
+
+      getEmailParts(prompt("Podaj adres mail:"));
+    </script>
+  </body>
+</html>
