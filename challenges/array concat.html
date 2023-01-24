@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createSchoolGroup(groupLetter, numGroups) {
+        let tab = [];
+
+        for (let i = 1; i <= numGroups; i++) {
+          tab.push(i + groupLetter);
+        }
+        return tab;
+      }
+
+      let group1 = createSchoolGroup("a", 3);
+      console.log(group1);
+
+      let group2 = createSchoolGroup("b", 6);
+      console.log(group2);
+
+      let group3 = createSchoolGroup("c", 8);
+      console.log(group3);
+
+      let finalTable = group1.concat(group2, group3);
+      console.log(finalTable);
+    </script>
+  </body>
+</html>
